@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Paste a job description and add your resume. Get a match score, the keywords you are missing, and better bullet points." />
+    <title>Resume and Job Match Analyzer</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#analyze-form">Skip to the tool</a>
+
+    <header class="site-header">
+      <div class="wrap header-row">
+        <img class="logo" src="/favicon.svg" alt="" width="44" height="44" />
+        <div>
+          <h1>Resume and Job Match Analyzer</h1>
+          <p class="tagline">Paste a job description and add your resume. See your match score, the keywords you are missing, and better bullet points.</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap" id="main">
+      <noscript><p class="notice">This tool needs JavaScript. Please turn it on and reload the page.</p></noscript>
+
+      <form id="analyze-form" novalidate autocomplete="off">
+        <div class="inputs">
+          <section class="card" aria-labelledby="job-heading">
+            <h2 id="job-heading"><span class="step" aria-hidden="true">1</span> Job description</h2>
+            <p class="hint" id="job-hint">Paste the full text of the job ad.</p>
+            <label class="visually-hidden" for="job">Job description</label>
+            <textarea id="job" name="jobDescription" aria-describedby="job-hint job-count" placeholder="Paste the job description here…" spellcheck="false"></textarea>
+            <div class="field-foot">
+              <span id="job-count" class="muted small"></span>
+              <button type="button" class="link" id="clear-job">Clear</button>
+            </div>
+          </section>
+
+          <section class="card" aria-labelledby="resume-heading">
+            <h2 id="resume-heading"><span class="step" aria-hidden="true">2</span> Your resume</h2>
+            <p class="hint" id="resume-hint">Upload a file, or paste the text.</p>
+
+            <fieldset class="segmented">
+              <legend class="visually-hidden">How do you want to add your resume?</legend>
+              <input type="radio" name="resumeMode" id="mode-file" value="file" checked />
+              <label for="mode-file">Upload a file</label>
+              <input type="radio" name="resumeMode" id="mode-text" value="text" />
+              <label for="mode-text">Paste text</label>
+            </fieldset>
+
+            <div id="resume-file-panel">
+              <input type="file" id="resume-file" class="visually-hidden" aria-describedby="resume-hint" />
+              <label for="resume-file" class="dropzone" id="dropzone">
+                <span class="drop-icon" aria-hidden="true">⇪</span>
+                <span class="drop-title">Drop your resume here</span>
+                <span class="drop-sub">or <span class="drop-link">choose a file</span></span>
+                <span class="muted small" id="file-limits">PDF, DOCX or TXT</span>
+              </label>
+              <div id="file-card" class="file-card" hidden>
+                <div class="file-info">
+                  <span class="file-name" id="file-name"></span>
+                  <span class="muted small" id="file-size"></span>
+                </div>
+                <div class="file-actions">
+                  <button type="button" class="small" id="change-file">Choose another</button>
+                  <button type="button" class="small" id="remove-file">Remove</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="resume-text-panel" hidden>
+              <label class="visually-hidden" for="resume-text">Resume text</label>
+              <textarea id="resume-text" name="resumeText" aria-describedby="resume-hint" placeholder="Paste your resume here. Put each achievement on its own line, starting with a dash or a bullet." spellcheck="false"></textarea>
+            </div>
+          </section>
+        </div>
+
+        <div class="card actions">
+          <div class="ai-choice">
+            <label class="check">
+              <input type="checkbox" id="use-ai" />
+              <span>Use AI to write the bullet-point rewrites</span>
+            </label>
+            <p class="muted small" id="ai-hint"></p>
+          </div>
+          <div class="buttons">
+            <button type="button" id="sample">Try a sample</button>
+            <button type="submit" class="primary" id="analyze">Analyze my resume</button>
+          </div>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <p id="error" class="error" role="alert" hidden></p>
+      </form>
+
+      <section id="results" class="results" aria-labelledby="results-title" hidden>
+        <div class="results-head">
+          <h2 id="results-title" tabindex="-1">Your results</h2>
+          <div class="toolbar">
+            <button type="button" class="small" id="copy-report">Copy report</button>
+            <button type="button" class="small" id="download-json">Download JSON</button>
+            <button type="button" class="small" id="print-report">Print</button>
+          </div>
+        </div>
+        <div id="results-body"></div>
+        <details class="card how">
+          <summary>How is the score worked out?</summary>
+          <p>The tool reads the job description and finds the skills and keywords it asks for. Then it checks which of them are in your resume.</p>
+          <ul>
+            <li>Must-have skills count the most. Nice-to-haves count the least.</li>
+            <li>A keyword that the job repeats counts a little more.</li>
+            <li>Soft skills and loose phrases count less than named skills and tools.</li>
+            <li>A keyword also counts when your resume names a skill that proves it. For example, React proves JavaScript.</li>
+          </ul>
+          <p>The score compares words. It does not judge how good your experience is. Treat it as a guide, not a verdict.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>Your resume is read on the computer that runs this app. The app does not save it. If you turn on AI, only the job description and a few bullet points go to the AI service.</p>
+      </div>
+    </footer>
+  </body>
+</html>

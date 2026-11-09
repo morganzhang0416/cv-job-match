@@ -1,0 +1,35 @@
+Alex Taylor
+Software Engineer
+alex.taylor@example.com | 021 000 0000 | Auckland, New Zealand
+
+SUMMARY
+Software engineer with 6 years of experience building web applications for small and medium businesses. I enjoy working in small teams and learning new tools.
+
+EXPERIENCE
+
+Software Engineer, Kauri Digital (fictional), Auckland
+March 2021 - Present
+- Responsible for building new features in React and Node.js for a booking platform used by 300 shops.
+- Worked on the REST API and the PostgreSQL database.
+- Helped with deployments to AWS (EC2 and S3) using GitHub Actions.
+- Wrote unit tests with Jest, which raised test coverage from 40% to 78%.
+- Reduced the page load time of the checkout page by 35% by splitting the JavaScript bundle and caching API calls.
+- Led weekly Agile planning with the product owner and two designers.
+- Ran monthly demos for stakeholders and used their feedback to plan the next release.
+
+Junior Developer, Pohutukawa Web Studio (fictional), Wellington
+January 2019 - February 2021
+- I improved the company website and fixed many bugs.
+- Built small web apps in JavaScript, Express and MongoDB for local customers.
+- Responsible for keeping the Git repositories tidy.
+- Worked on a Docker setup so that new developers could start in one hour instead of one day.
+- Supported customers by email and phone, and explained technical problems in simple words.
+
+SKILLS
+JavaScript, TypeScript, React, Node.js, Express, PostgreSQL, MongoDB, AWS (EC2, S3), Docker, Git, GitHub Actions, Jest, REST APIs, Agile
+
+EDUCATION
+Bachelor of Information Technology, University of Example, 2018
+
+CERTIFICATIONS
+AWS Certified Cloud Practitioner, 2022

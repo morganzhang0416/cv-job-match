@@ -1,0 +1,14 @@
+{
+  // Type-checks the server code and the tests together. It does not write any files.
+  // public/report.js has no browser code, so the tests can import it and this check can read it.
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "noEmit": true,
+    "sourceMap": false,
+    "allowJs": true,
+    "checkJs": true,
+    "maxNodeModuleJsDepth": 0
+  },
+  "include": ["./**/*.ts", "../src/**/*.ts", "../public/report.js", "../scripts/*.mjs"]
+}

@@ -1,0 +1,39 @@
+Senior Full-Stack Engineer
+Brightwave Labs (a fictional company used for this demo)
+Remote-friendly, New Zealand
+
+About Brightwave Labs
+Brightwave Labs builds scheduling software for small clinics. We are a friendly team of 40 people. We care about quality, kind communication and learning from each other.
+
+About the role
+You will join our Platform team and help us ship new features every week. You will work with product managers and designers, and you will own your work from idea to production.
+
+What you'll do
+- Design, build and test web features in TypeScript, React and Node.js.
+- Build and maintain REST APIs that use PostgreSQL.
+- Run services on AWS (Lambda, S3 and RDS) and improve our CI/CD pipelines.
+- Write automated tests with Jest and keep our code quality high.
+- Work with stakeholders to turn ideas into clear plans, and explain technical choices in simple words.
+- Take part in Agile ceremonies and help the team improve how we work.
+
+What you'll bring
+- 5+ years of experience building web applications.
+- Strong skills in TypeScript and JavaScript.
+- Hands-on experience with React and Node.js.
+- Experience designing REST APIs and working with PostgreSQL.
+- Experience with AWS, Docker and Kubernetes.
+- Experience with CI/CD pipelines and automated testing.
+- Clear communication and good teamwork.
+
+Nice to have
+- Experience with GraphQL.
+- Experience with Terraform or other infrastructure as code tools.
+- Monitoring and observability tools such as Datadog or Grafana.
+- Knowledge of web accessibility (WCAG).
+- A history of mentoring other engineers.
+
+Benefits
+We offer flexible hours, 5 weeks of paid leave, a learning budget and health insurance. Brightwave Labs is an equal opportunity employer. We welcome people of all backgrounds.
+
+How to apply
+Send us your CV and a short note about a project you are proud of.

@@ -1,0 +1,35 @@
+{
+  "name": "resume-job-match-analyzer",
+  "version": "0.1.0",
+  "description": "Paste a job description, add your resume, and get a match score, missing keywords and bullet-point rewrites.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "prestart": "node scripts/check-node.mjs",
+    "start": "node src/server.ts",
+    "predev": "node scripts/check-node.mjs",
+    "dev": "node --watch src/server.ts",
+    "pretest": "node scripts/check-node.mjs",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc -p test/tsconfig.json && tsc -p tsconfig.client.json",
+    "build": "tsc",
+    "prestart:dist": "node scripts/check-node.mjs",
+    "start:dist": "node dist/server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "multer": "^2.5.0",
+    "stemmer": "^2.0.1",
+    "unpdf": "^1.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^22.20.5",
+    "typescript": "^7.0.2"
+  }
+}

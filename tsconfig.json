@@ -1,0 +1,40 @@
+{
+  // The server runs TypeScript directly with Node 22.18+ ("node src/server.ts").
+  // "tsc" is used to type-check and to build a plain JavaScript copy into dist/.
+  "compilerOptions": {
+    // File layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment
+    "module": "nodenext",
+    "target": "es2023",
+    "lib": ["es2023"],
+    "types": ["node"],
+    "sourceMap": true,
+
+    // Node strips types without rewriting code, so only "erasable" syntax is allowed
+    // (no enums, namespaces or constructor parameter properties).
+    "erasableSyntaxOnly": true,
+    // Source files import each other with ".ts" extensions; tsc rewrites them to ".js" in dist/.
+    "rewriteRelativeImportExtensions": true,
+
+    // Strict type checking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    // Recommended
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
